@@ -21,11 +21,11 @@ The user should be able to:
 ``` $ npm i```
 
 ### Screenshots
-
+<div align="center"> 
 <a href="https://ibb.co/HXdZC3j"><img src="https://i.ibb.co/qx56CVv/Screen-Shot-2020-06-11-at-6-22-22-PM.png" alt="Screen-Shot-2020-06-11-at-6-22-22-PM" border="0"></a>
 <a href="https://ibb.co/s2QvG4g"><img src="https://i.ibb.co/7XVJ5DS/Screen-Shot-2020-06-11-at-6-22-48-PM.png" alt="Screen-Shot-2020-06-11-at-6-22-48-PM" border="0"></a>
 <a href="https://ibb.co/rfS6jm6"><img src="https://i.ibb.co/7N5WfXW/Screen-Shot-2020-06-11-at-6-23-05-PM.png" alt="Screen-Shot-2020-06-11-at-6-23-05-PM" border="0"></a>
-
+</div>
 #### Questions?
 email tjeansouth@gmail.com
 
