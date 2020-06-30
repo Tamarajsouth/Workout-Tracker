@@ -3,7 +3,11 @@ const db = require("../models");
 module.exports = function (app) {
   app.get("/api/workouts", function (req, res) {
     db.Workout.find({})
-      .then(function (dbWorkouts) {
+    .then(dbWorkouts => {
+      dbWorkouts.forEach(dbWorkout => {
+        dbWorkout.setTotalDuration();
+      });
+      // .then(function (dbWorkouts) {
         res.json(dbWorkouts);
       })
       .catch((err) => {
@@ -23,7 +27,7 @@ module.exports = function (app) {
 
   app.put("/api/workouts/:id", function (req, res) {
     console.log(req.body);
-    db.Workout.updateOne({ _id: req.params.id }, { body: req.body }).then(
+    db.Workout.findByIdAndUpdate(req.params.id, { $push: {exercises: req.body } }).then(
       function (dbWorkouts) {
         console.log(dbWorkouts);
         res.json(dbWorkouts);
@@ -41,13 +45,5 @@ module.exports = function (app) {
       }
     });
   });
-
-//   app.post("/api/workouts/range", function (req, res){
-//       db.Workout.create({})
-//       .then(data => res.json(data))
-//       .catch(err => {
-//           res.json(err)
-//       })
-//   });
 
 };
